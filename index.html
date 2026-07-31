@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="receipt-intro">
+        <p class="receipt-intro-text">You have been issued a receipt</p>
+        <div class="receipt-intro">
+            <div class="receipt-intro-text">INITIALIZING RECEIPT PORTFOLIO...</div>
+            <span class="skip-hint">[TAP ANYWHERE TO SKIP]</span>
+        </div>
+    </div>
+
+    <div class="site-reveal">
+        <div class="receipt-wrapper">
+
+            <header class="receipt-header grid-12">
+                <div class="span-full lg-span-12 header-content">
+                    <h1 class="receipt-title">PORTFOLIO</h1>
+                    <div class="header-line"></div>
+
+                    <div class="receipt-meta">
+                        RECEIPT №001<br>
+                        DATE: 24.07.2026<br>
+                        CASHIER: Daria Prokuda<br>
+                        TERMINAL: 01
+                    </div>
+
+                    <hr class="dashed-divider">
+
+                    <div class="receipt-instruction">
+                        Each line item is a project.<br>
+                        Click to see what's inside.
+                    </div>
+
+                    <hr class="dashed-divider">
+                </div>
+            </header>
+
+            <main class="receipt-list">
+
+                <!-- 001: About me -->
+                <section class="receipt-item">
+                    <button class="receipt-summary" aria-expanded="false" aria-controls="section-about">
+                        <span class="item-number">001</span>
+                        <span class="item-name">About me</span>
+                    </button>
+                    <div id="section-about" class="receipt-detail" aria-hidden="true">
+                        <div class="detail-content grid-12">
+                            <!-- Image Column -->
+                            <div class="about-col-img">
+                                <div class="image-box">
+                                    <!-- Replace with your actual image path -->
+                                    <img src="images/about-me/about-me.jpg" alt="3D Yellow Character">
+                                </div>
+                            </div>
+
+                            <!-- Intro Text Column -->
+                            <div class="about-col-intro">
+                                <p>Hi, I'm Daria — a graphic designer focused on branding and visual identity.</p>
+                            </div>
+
+                            <!-- Main Text Column -->
+                            <div class="about-col-main">
+                                <p>Since 2024 I've been working freelance, mostly on logo design and full brand systems:
+                                    logobooks, guidelines, packaging concepts, and the visuals that hold a brand
+                                    together. I
+                                    also animate logos and put together short motion pieces in After Effects, design
+                                    Instagram content, and build layouts and presentations in Figma.</p>
+                                <p>Right now I'm designing my own typeface, just for the challenge of it.</p>
+                                <p>Day to day I work across Adobe Creative Suite, Figma, and FontLab, and I like folding
+                                    AI
+                                    tools into my process too — for moodboards, ideation, or just talking through an
+                                    idea
+                                    before it becomes a design.</p>
+                            </div>
+
+                            <!-- Education Text Column -->
+                            <div class="about-col-edu">
+                                <p>Also studying graphic design at Lviv National Academy of Arts, in case that matters
+                                    to
+                                    you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 002: Logofolio -->
+                <section class="receipt-item">
+                    <button class="receipt-summary" aria-expanded="false" aria-controls="section-logofolio">
+                        <span class="item-number">002</span>
+                        <span class="item-name">Logofolio</span>
+                    </button>
+                    <div id="section-logofolio" class="receipt-detail" aria-hidden="true">
+                        <div class="detail-content grid-12">
+
+                            <!-- Logo (1) -->
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(1)</span>
+                                <div class="logo-img-wrapper">
+                                    <!-- Replace with your actual image path -->
+                                    <img src="images/logofolio/logo1.jpg" alt="Mescla Logo">
+                                </div>
+                            </div>
+
+                            <!-- Logo (2) -->
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(2)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo2.jpg" alt="Wharf Logo">
+                                </div>
+                            </div>
+
+                            <!-- Logo (3) -->
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(3)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo3.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                            <!-- Logo (4) -->
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(4)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo4.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(5)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo5.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(6)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo6.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(7)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo7.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(8)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo8.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                            <div class="span-full md-span-4 lg-span-4 logo-item">
+                                <span class="logo-number">(9)</span>
+                                <div class="logo-img-wrapper">
+                                    <img src="images/logofolio/logo9.jpg" alt="Opaline Logo">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 003: Branding -->
+                <section class="receipt-item">
+                    <button class="receipt-summary" aria-expanded="false" aria-controls="section-branding">
+                        <span class="item-number">003</span>
+                        <span class="item-name">Branding</span>
+                    </button>
+                    <div id="section-branding" class="receipt-detail" aria-hidden="true">
+                        <div class="detail-content grid-12">
+
+                            <!-- ROW 1: Intro Text & Concept Grid -->
+                            <div class="span-full lg-span-3">
+                                <h3 class="branding-title">Akademia Gracia</h3>
+                                <img src="images/branding/Gratsia1.jpg" alt="Academia Gratsia Sign"
+                                    class="branding-img">
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CONCEPT</h4>
+                                <hr class="dashed-divider">
+                                <p>Akademia Gracia is a rehabilitation center in Lviv with 35 years of history,
+                                    specializing
+                                    in non-surgical correction of posture and scoliosis for children and adults. The
+                                    brand
+                                    had outgrown its old identity — pink, cluttered, and closer to a beauty salon than a
+                                    center of medical expertise.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CHALLENGE</h4>
+                                <hr class="dashed-divider">
+                                <p>Balance scientific credibility with human warmth — without looking clinical or
+                                    childish.
+                                    The visual language needed to speak to both worried parents and adults living with
+                                    chronic pain, with honesty and without fear.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">SOLUTION</h4>
+                                <hr class="dashed-divider">
+                                <p>The identity is built around a custom monogram of the letter "A" — a thick vertical
+                                    stroke for structure and posture, paired with a thin calligraphic curve for movement
+                                    and
+                                    grace. A warm palette of coral and teal replaces the old aggressive pink, paired
+                                    with a
+                                    friendly, honest tone of voice across all communication.</p>
+                            </div>
+
+                            <!-- ROW 2: Billboard (5 cols) + Bottle (3 cols) + Dumbbells (4 cols) = 12 cols -->
+                            <div class="span-full lg-span-5">
+                                <img src="images/branding/Gratsia2.jpg" alt="Billboard Mockup" class="branding-img">
+                            </div>
+                            <div class="span-full lg-span-3">
+                                <img src="images/branding/Gratsia3.jpg" alt="Red Water Bottle" class="branding-img">
+                            </div>
+                            <div class="span-full lg-span-4">
+                                <img src="images/branding/Gratsia4.jpg" alt="Dumbbells and Towel" class="branding-img">
+                            </div>
+
+                            <!-- ROW 3: Four square tiles in one row -->
+                            <div class="span-full md-span-4 lg-span-3">
+                                <img src="images/branding/Gratsia5.jpg" alt="Social Post 1" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-3">
+                                <img src="images/branding/Gratsia6.jpg" alt="Social Post 2" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-3">
+                                <img src="images/branding/Gratsia7.jpg" alt="Social Post 3" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-3">
+                                <img src="images/branding/Gratsia8.jpg" alt="Business Cards" class="branding-img">
+                            </div>
+
+                            <!-- ROW 4: Three Images (4 cols + 5 cols + 3 cols = 12 cols) -->
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/branding/Gratsia9.jpg" alt="Construction Fence Banner"
+                                    class="branding-img">
+                            </div>
+                            <div class="span-full md-span-5 lg-span-5">
+                                <img src="images/branding/Gratsia10.jpg" alt="Stationery and Folder Part 1"
+                                    class="branding-img">
+                            </div>
+                            <div class="span-full md-span-3 lg-span-3">
+                                <img src="images/branding/Gratsia11.jpg" alt="Stationery and Folder Part 2"
+                                    class="branding-img">
+                            </div>
+                            <!-- =========================================
+         PROJECT 2: MODULE
+         ========================================= -->
+
+                            <!-- ROW 1: Title/Image (3 cols) + Concept (3 cols) + Challenge (3 cols) + Solution (3 cols) = 12 cols -->
+                            <div class="span-full lg-span-3">
+                                <h3 class="branding-title">Module</h3>
+                                <img src="images/branding/Module1.jpg" alt="Module T-Shirt" class="branding-img">
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CONCEPT</h4>
+                                <hr class="dashed-divider">
+                                <p>Module is a minimalist coffee spot designed for people who work from their laptop — a
+                                    "third place" between home and office. A quiet, focused space where specialty coffee
+                                    meets productivity, inspired by industrial aesthetics: concrete, steel, and open
+                                    space
+                                    that helps visitors stay in the flow.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CHALLENGE</h4>
+                                <hr class="dashed-divider">
+                                <p>The brand is built on a geometric grid and technical precision. A stylized rabbit
+                                    mascot
+                                    is integrated into the letter "M," adding personality to the strict modular system —
+                                    symbolizing agility and mental focus, mirroring the people who come here to create
+                                    and
+                                    work.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">SOLUTION</h4>
+                                <hr class="dashed-divider">
+                                <p>Neutral industrial grays combine with a bright Electric Blue, creating a look that's
+                                    modern, energetic, and grounded at the same time. A palette built to feel both calm
+                                    enough to focus in, and sharp enough to stand out.</p>
+                            </div>
+
+                            <!-- ROW 2: Three Images (4 cols + 4 cols + 4 cols = 12 cols) -->
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/branding/Module2.jpg" alt="Module Signage" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/branding/Module3.jpg" alt="Coffee Cup Holder" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/branding/Module4.jpg" alt="Receipts and Glasses" class="branding-img">
+                            </div>
+
+                            <!-- ROW 3: Three Images (5 cols + 4 cols + 3 cols = 12 cols) -->
+                            <div class="span-full md-span-4 lg-span-5">
+                                <img src="images/branding/Module5.jpg" alt="Grid Posters" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/branding/Module6.jpg" alt="Coffee Bags Shelf" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-3">
+                                <img src="images/branding/Module7.jpg" alt="Pastry and Grid Tray" class="branding-img">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 004: Packaging -->
+                <section class="receipt-item">
+                    <button class="receipt-summary" aria-expanded="false" aria-controls="section-packaging">
+                        <span class="item-number">004</span>
+                        <span class="item-name">Packaging</span>
+                    </button>
+                    <div id="section-packaging" class="receipt-detail" aria-hidden="true">
+                        <div class="detail-content grid-12">
+
+                            <!-- ROW 1: Intro Text & Concept Grid -->
+                            <div class="span-full lg-span-3">
+                                <h3 class="branding-title">Mescla</h3>
+                                <img src="images/packaging/mescla1.jpg" alt="Mescla Wine Bottles in Grass"
+                                    class="branding-img">
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CONCEPT</h4>
+                                <hr class="dashed-divider">
+                                <p>Mescla, derived from the Italian word for "mixture," is a natural wine brand built
+                                    around
+                                    a strange and vivid myth: a goat once wandered into a vineyard, stripped the young
+                                    vines
+                                    bare — and by accident, taught winemakers the art of pruning.</p>
+                                <p>The brand's mark merges human and goat into a single wild figure, "kin to the wine
+                                    god"
+                                    himself — leaning into the raw, untamed character of natural wine: unfiltered,
+                                    unpolished, and true to instinct.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CHALLENGE</h4>
+                                <hr class="dashed-divider">
+                                <p>Giving a surreal, mythological figure enough restraint to still function as a wine
+                                    label
+                                    — not as an illustration, but as a mark that could scale across three different wine
+                                    variants without losing legibility. Balancing the wild, expressive linework of the
+                                    goat-human figure with a calm, editorial typography system (Fraunces) was key to
+                                    keeping
+                                    the brand feeling intentional rather than chaotic.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">SOLUTION</h4>
+                                <hr class="dashed-divider">
+                                <p>The final identity uses a single fluid, hand-drawn mark across a three-bottle range —
+                                    Goat Red, Goat Gold, and Goat Bone — where only the accent color shifts to reflect
+                                    each
+                                    wine's character. The result is a natural wine brand that feels primal and
+                                    instinctive,
+                                    yet remains clean enough to stand confidently on a shelf.</p>
+                            </div>
+
+                            <!-- ROW 2: Full-Width Label Shot (12 cols) -->
+                            <div class="span-full lg-span-12">
+                                <img src="images/packaging/mescla2.jpg" alt="Mescla Label Lineup" class="branding-img">
+                            </div>
+
+                            <!-- ROW 3: Two Landscape Photos (6 cols + 6 cols = 12 cols) -->
+                            <div class="span-full md-span-6 lg-span-6">
+                                <img src="images/packaging/mescla3.jpg" alt="Three Bottles Lineup" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-6 lg-span-6">
+                                <img src="images/packaging/mescla4.jpg" alt="Bottle in Grapes" class="branding-img">
+                            </div>
+
+                            <!-- ROW 4: Three Portrait Photos (4 cols + 4 cols + 4 cols = 12 cols) -->
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/mescla5.jpg" alt="Bottle Shadow Detail" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/mescla6.jpg" alt="Pouring Wine into Glass"
+                                    class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/mescla7.jpg" alt="Goat Myth Illustration and Bottle"
+                                    class="branding-img">
+                            </div>
+                            <!-- ISKRA PROJECT -->
+                            <div class="span-full lg-span-3">
+                                <h3 class="branding-title">Iskra</h3>
+                                <img src="images/packaging/iskra1.jpg" alt="Iskra Can in Hand" class="branding-img">
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CONCEPT</h4>
+                                <hr class="dashed-divider">
+                                <p>ISKRA is a prebiotic sparkling drink brand where health meets a bold, "acid"
+                                    aesthetic.
+                                    The name means "spark" — and the identity captures that energy through stylized
+                                    geometric patterns and vibrant color, proving that sugar-free wellness can look as
+                                    exciting as it feels.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CHALLENGE</h4>
+                                <hr class="dashed-divider">
+                                <p>Sugar-free and prebiotic drinks often lean soft, clinical, or purely "healthy" in
+                                    their
+                                    branding — ISKRA needed to break that pattern without losing trust in the product
+                                    itself. The challenge was building a system punchy enough to stand out on a shelf,
+                                    while
+                                    staying flexible across three very different flavors.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">SOLUTION</h4>
+                                <hr class="dashed-divider">
+                                <p>Each flavor gets its own faceted fruit illustration — strawberry-lemon,
+                                    mint-pineapple,
+                                    blueberry-lavender — built from sharp geometric shapes that echo the brand's spark
+                                    motif. A bold color per can, a starburst mark, and confident type give ISKRA a shelf
+                                    presence that feels energetic first, "healthy" second.</p>
+                            </div>
+
+                            <!-- ROW 2: Three Photos (4 cols + 5 cols + 3 cols = 12 cols) -->
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/iskra2.jpg" alt="Lemon Strawberry Can" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-5 lg-span-5">
+                                <img src="images/packaging/iskra3.jpg" alt="Three Flavors Lineup" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-3 lg-span-3">
+                                <img src="images/packaging/iskra4.jpg" alt="Blueberry Cans Stack" class="branding-img">
+                            </div>
+
+                            <!-- ROW 3: Three Photos (4 cols + 4 cols + 4 cols = 12 cols) -->
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/iskra5.jpg" alt="Shelf Display with Sneakers"
+                                    class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/iskra6.jpg" alt="Close up Can Texture" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-4 lg-span-4">
+                                <img src="images/packaging/iskra7.jpg" alt="People Holding Cans" class="branding-img">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 005: Font -->
+                <section class="receipt-item">
+                    <button class="receipt-summary" aria-expanded="false" aria-controls="section-font">
+                        <span class="item-number">005</span>
+                        <span class="item-name">Font</span>
+                    </button>
+                    <div id="section-font" class="receipt-detail" aria-hidden="true">
+                        <div class="detail-content grid-12">
+
+                            <!-- ROW 1: Intro Text & Font Details Grid -->
+                            <div class="span-full lg-span-3">
+                                <h3 class="branding-title">Rebro</h3>
+                                <img src="images/font/font1.jpg" alt="Rebro Font Character" class="branding-img">
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">CONCEPT</h4>
+                                <hr class="dashed-divider">
+                                <p>Rebro is a geometric grotesque — pragmatic, with a strong character. A typeface for
+                                    those
+                                    who want to speak direct. Its character is strict but not aggressive — more precise
+                                    than
+                                    harsh. Inspired by the aesthetics of industrial road signs, the clean lines of
+                                    engineering drafts, early computer interfaces, and street lettering in general.</p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">PURPOSE</h4>
+                                <hr class="dashed-divider">
+                                <p>Built for headlines, branding, and environments where clarity matters more than
+                                    decoration — where the message needs to land without extra words getting in the way.
+                                </p>
+                            </div>
+
+                            <div class="span-full lg-span-3 branding-text-block">
+                                <h4 class="branding-subtitle">STATUS</h4>
+                                <hr class="dashed-divider">
+                                <p>Currently in progress, designed in FontLab. The uppercase letterset, numerals, and
+                                    basic
+                                    punctuation are complete. Lowercase letters are in development next.</p>
+                            </div>
+
+                            <!-- ROW 2: Full-Width Alphabet Display (12 cols) -->
+                            <div class="span-full lg-span-12">
+                                <img src="images/font/font2.jpg" alt="Rebro Alphabet Showcase" class="branding-img">
+                            </div>
+
+                            <!-- ROW 3: Two Images (7 cols + 5 cols = 12 cols) -->
+                            <div class="span-full md-span-7 lg-span-7">
+                                <img src="images/font/font3.jpg" alt="Type Specimen Sheet" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-5 lg-span-5">
+                                <img src="images/font/font4.jpg" alt="Glyph Detail" class="branding-img">
+                            </div>
+
+                            <!-- ROW 4: Full-Width Quote Graphic (12 cols) -->
+                            <div class="span-full lg-span-12">
+                                <img src="images/font/font7.jpg" alt="Quote Poster" class="branding-img">
+                            </div>
+
+                            <!-- ROW 5: Two Final Images (6 cols + 6 cols = 12 cols) -->
+                            <div class="span-full md-span-6 lg-span-6">
+                                <img src="images/font/font5.jpg" alt="Street Poster Mockup" class="branding-img">
+                            </div>
+                            <div class="span-full md-span-6 lg-span-6">
+                                <img src="images/font/font6.jpg" alt="Red Card Character Mockup" class="branding-img">
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- 006: Contacts -->
+                <section class="receipt-item">
+                    <button class="receipt-summary" aria-expanded="false" aria-controls="section-contacts">
+                        <span class="item-number">006</span>
+                        <span class="item-name">Contacts</span>
+                    </button>
+                    <div id="section-contacts" class="receipt-detail" aria-hidden="true">
+                        <div class="detail-content grid-12">
+
+                            <!-- Left Column: Direct Message & Email -->
+                            <div class="span-full lg-span-6 contact-info-block">
+                                <h4 class="branding-subtitle">GET IN TOUCH</h4>
+                                <hr class="dashed-divider">
+                                <!-- ASCII Cat Added Here -->
+                                <pre class="ascii-cat">
+/\_/\
+( o.o )
+> ^ <
+/|   |\
+(_|   |_)
+d   b
+</pre>
+                                <p class="contact-text">Available for freelance projects, brand identities, and creative
+                                    collaborations.</p>
+                                <a href="mailto:dariaprokuda2@gmail.com"
+                                    class="contact-email">dariaprokuda2@gmail.com</a>
+                            </div>
+
+                            <!-- Right Column: Social Links -->
+                            <div class="span-full lg-span-6 contact-links-block">
+                                <h4 class="branding-subtitle">SOCIALS & PORTFOLIO</h4>
+                                <hr class="dashed-divider">
+                                <ul class="contact-links-list">
+                                    <li>
+                                        <a href="https://www.behance.net/dariayur" target="_blank"
+                                            rel="noopener noreferrer" class="contact-link">
+                                            <span>BEHANCE</span>
+                                            <span class="link-arrow">↗</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/dariayur?igsh=OXpqbGtiNm1tNDRm&utm_source=qr"
+                                            target="_blank" rel="noopener noreferrer" class="contact-link">
+                                            <span>INSTAGRAM</span>
+                                            <span class="link-arrow">↗</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/%D0%B4%D0%B0%D1%80-%D1%8F-%D0%BF%D1%80%D0%BE%D0%BA%D1%83%D0%B4%D0%B0-893172382/"
+                                            target="_blank" rel="noopener noreferrer" class="contact-link">
+                                            <span>LINKEDIN</span>
+                                            <span class="link-arrow">↗</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="receipt-footer grid-12">
+                <div class="span-full lg-span-12 footer-content">
+                    <hr class="dashed-divider">
+                    <div class="footer-row">
+                        <span class="footer-label">Total</span>
+                        <span class="footer-value">1 designer</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="js/script.js"></script>
+    </div>
+    <!-- Back to Top Arrow Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <span>↑</span>
+    </button>
+</body>
+
+</html>

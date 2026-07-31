@@ -1,0 +1,795 @@
+/* =========================================
+   1. CSS RESET & BASE
+   ========================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* =========================================
+   2. GLOBAL DESIGN TOKENS
+   ========================================= */
+:root {
+    /* Colors */
+    --color-bg: #F5F5F2;
+    --color-text: #0F0F0F;
+
+    /* Typography */
+    --font-mono: 'Courier Prime', monospace;
+    --font-display: 'Pixelify Sans', sans-serif;
+
+    /* Font Sizes */
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 2rem;
+    --fs-xl: 3rem;
+    --fs-display: 8rem;
+
+    /* Grid System Variables */
+    --grid-gap: 16px;
+    --grid-padding: 16px;
+    --max-width: 1440px;
+
+    /* Image interaction tokens (new — avoids repeating magic numbers) */
+    --img-hover-scale: 1.03;
+    --img-transition: transform 0.3s ease;
+    --img-border: 1px solid var(--color-text);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: var(--fs-base);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* =========================================
+   3. GLOBAL 12-COLUMN GRID SYSTEM
+   ========================================= */
+/* Base (Mobile): 4 Columns */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--grid-gap);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--grid-padding);
+    width: 100%;
+}
+
+/* Tablet: 8 Columns */
+@media (min-width: 768px) {
+    .grid-12 {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+}
+
+/* Desktop: 12 Columns */
+@media (min-width: 1024px) {
+    .grid-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+}
+
+.grid-12>* {
+    min-width: 0;
+}
+
+/* --- Span Utilities --- */
+.span-full {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+    .md-span-1 {
+        grid-column: span 1;
+    }
+
+    .md-span-2 {
+        grid-column: span 2;
+    }
+
+    .md-span-3 {
+        grid-column: span 3;
+    }
+
+    .md-span-4 {
+        grid-column: span 4;
+    }
+
+    .md-span-5 {
+        grid-column: span 5;
+    }
+
+    .md-span-6 {
+        grid-column: span 6;
+    }
+
+    .md-span-7 {
+        grid-column: span 7;
+    }
+
+    .md-span-8 {
+        grid-column: span 8;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg-span-1 {
+        grid-column: span 1;
+    }
+
+    .lg-span-2 {
+        grid-column: span 2;
+    }
+
+    .lg-span-3 {
+        grid-column: span 3;
+    }
+
+    .lg-span-4 {
+        grid-column: span 4;
+    }
+
+    .lg-span-5 {
+        grid-column: span 5;
+    }
+
+    .lg-span-6 {
+        grid-column: span 6;
+    }
+
+    .lg-span-7 {
+        grid-column: span 7;
+    }
+
+    .lg-span-8 {
+        grid-column: span 8;
+    }
+
+    .lg-span-9 {
+        grid-column: span 9;
+    }
+
+    .lg-span-10 {
+        grid-column: span 10;
+    }
+
+    .lg-span-11 {
+        grid-column: span 11;
+    }
+
+    .lg-span-12 {
+        grid-column: span 12;
+    }
+}
+
+/* =========================================
+   4. GLOBAL IMAGE CONSTRAINTS
+   ========================================= */
+.image-box {
+    height: 400px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border: var(--img-border);
+    transition: var(--img-transition);
+}
+
+.image-box img:hover {
+    transform: scale(var(--img-hover-scale));
+}
+
+/* =========================================
+   5. RECEIPT MENU UI
+   ========================================= */
+.receipt-wrapper {
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.receipt-header {
+    margin: 1rem auto 0.5rem auto;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.receipt-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 10vw, var(--fs-display));
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.header-line {
+    width: 100%;
+    max-width: 550px;
+    height: 10px;
+    background-color: var(--color-text);
+    margin: 0.5rem auto 1.5rem auto;
+}
+
+.receipt-meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.receipt-instruction {
+    font-family: var(--font-mono);
+    font-size: var(--fs-base);
+    font-style: italic;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.dashed-divider {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-image: repeating-linear-gradient(to right,
+            var(--color-text) 0,
+            var(--color-text) 12px,
+            transparent 12px,
+            transparent 24px);
+    margin: 0.25rem 0;
+}
+
+/* --- Accordion List --- */
+.receipt-list {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--grid-padding);
+}
+
+.receipt-item {
+    width: 100%;
+    margin-bottom: 0.25rem;
+}
+
+.receipt-summary {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    font-size: var(--fs-lg);
+    padding: 0;
+    line-height: 1.1;
+    transition: color 0.2s ease;
+}
+
+.receipt-summary:hover {
+    color: #ED4009;
+}
+
+.item-name {
+    order: 1;
+}
+
+.item-number {
+    order: 3;
+}
+
+.receipt-summary::after {
+    content: "";
+    order: 2;
+    flex-grow: 1;
+    height: 4px;
+    margin: 0 1rem;
+    background-image: radial-gradient(circle, currentColor 2px, transparent 2px);
+    background-size: 12px 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+    position: relative;
+    top: -0.3em;
+}
+
+/* --- Accordion Animation --- */
+.receipt-detail {
+    display: grid;
+    grid-template-rows: 0fr;
+    /* Increased duration from 0.3s to 0.7s to make it slower */
+    transition: grid-template-rows 0.7s ease;
+}
+
+.receipt-detail.is-open {
+    grid-template-rows: 1fr;
+}
+
+.detail-content {
+    min-height: 0;
+    overflow: hidden;
+    padding-top: 1px;
+    margin-top: -1px;
+    /* Initial state when closed: slightly shifted down and transparent */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+/* When opened: fades to full opacity and slides into its normal position */
+.receipt-detail.is-open .detail-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.receipt-detail.is-open .detail-content.grid-12 {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Spacing between branding project blocks (single source of truth) */
+.detail-content.grid-12>div {
+    margin-bottom: 0.02rem;
+}
+
+/* --- Footer --- */
+.footer-content {
+    padding: 1.5rem 0 3rem 0;
+}
+
+.footer-row {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    font-size: var(--fs-lg);
+    margin-top: 1.5rem;
+}
+
+.footer-label {
+    order: 1;
+}
+
+.footer-value {
+    order: 3;
+    margin-left: auto;
+}
+
+/* =========================================
+   ABOUT ME SECTION GRID LAYOUT
+   ========================================= */
+.about-col-img,
+.about-col-intro,
+.about-col-main,
+.about-col-edu {
+    grid-column: 1 / -1;
+    font-size: var(--fs-sm);
+    margin-bottom: 1.5rem;
+}
+
+.about-col-main p {
+    margin-bottom: 0.75rem;
+}
+
+.about-col-main p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+    .about-col-img {
+        grid-column: 1 / span 3;
+        margin-bottom: 0;
+    }
+
+    .about-col-intro {
+        grid-column: 4 / span 2;
+        margin-bottom: 0;
+    }
+
+    .about-col-main {
+        grid-column: 7 / span 4;
+        margin-bottom: 0;
+    }
+
+    .about-col-edu {
+        grid-column: 11 / span 2;
+        margin-bottom: 0;
+    }
+}
+
+.about-col-img .image-box {
+    height: auto;
+}
+
+.about-col-img .image-box img {
+    height: auto;
+}
+
+/* =========================================
+   LOGOFOLIO SECTION
+   ========================================= */
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.logo-number {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.logo-img-wrapper {
+    width: 100%;
+}
+
+.logo-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* =========================================
+   BRANDING SECTION
+   ========================================= */
+.branding-title {
+    font-size: var(--fs-base);
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.branding-subtitle {
+    font-size: var(--fs-base);
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.branding-text-block p {
+    font-size: var(--fs-sm);
+    margin-top: 0.5rem;
+}
+
+/* Single, consolidated definition — was previously declared 3x
+   (base rule, then a border-only rule, then a transition-only rule).
+   Merged here so the cascade only has to resolve this once. */
+.branding-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border: var(--img-border);
+    transition: var(--img-transition);
+}
+
+.branding-img:hover {
+    transform: scale(var(--img-hover-scale));
+}
+
+/* =========================================
+   SECTION ENTRANCE ANIMATION
+   ========================================= */
+.receipt-item,
+.receipt-footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.receipt-item.is-visible,
+.receipt-footer.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   CONTACTS SECTION
+   ========================================= */
+
+.contact-text {
+    font-size: var(--fs-sm);
+    margin: 0.5rem 0 1rem 0;
+}
+
+.contact-email {
+    font-size: var(--fs-base);
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.contact-email:hover {
+    color: #ED4009;
+}
+
+.contact-links-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.contact-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-base);
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--color-text);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #ED4009;
+    padding-left: 0.5rem;
+}
+
+.link-arrow {
+    font-size: var(--fs-sm);
+}
+
+/* =========================================
+   IMAGE HOVER FOCUS EFFECT
+   ========================================= */
+img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+    position: relative;
+    z-index: 1;
+}
+
+img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+/* =========================================
+   INTRO SCREEN + TYPEWRITER TEXT + SITE DROP-IN
+   ========================================= */
+body {
+    background-color: var(--color-bg);
+    /* light, not dark — removes the seam entirely */
+    overflow-x: hidden;
+}
+
+.receipt-intro {
+    position: fixed;
+    inset: 0;
+    background-color: #0F0F0F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: introFadeOut 1s ease forwards;
+    animation-delay: 5.4s;
+    /* only starts fading once the site has FULLY dropped in */
+}
+
+.receipt-intro-text {
+    font-family: var(--font-mono);
+    font-size: var(--fs-md);
+    color: var(--color-bg);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-right: 0.1em solid var(--color-bg);
+    padding-right: 0.15em;
+    width: 0;
+    animation: typewriter 3s steps(32, end) forwards,
+        blinkCursor 0.6s step-end infinite;
+    animation-delay: 0.3s;
+}
+
+@keyframes typewriter {
+    to {
+        width: calc(32ch + 1.6em);
+        /* extra buffer for letter-spacing + cursor */
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes introFadeOut {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+
+    99% {
+        opacity: 0;
+        display: flex;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.site-reveal {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    transform: translateY(-100%);
+    animation: siteDropIn 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 4.2s;
+}
+
+@keyframes siteDropIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .receipt-intro,
+    .receipt-intro-text,
+    .site-reveal {
+        animation: none;
+    }
+
+    .receipt-intro {
+        display: none;
+    }
+
+    .site-reveal {
+        transform: none;
+    }
+}
+
+/* =========================================
+   RECEIPT PRINTER CURSOR TRAIL
+   ========================================= */
+.printer-dot {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background-color: var(--color-text);
+    opacity: 0.25;
+    /* Faint look */
+    pointer-events: none;
+    /* Ensures the dots don't block mouse clicks */
+    border-radius: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: fadeOutDot 0.6s linear forwards;
+}
+
+@keyframes fadeOutDot {
+    0% {
+        opacity: 0.25;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+/* =========================================
+    CAT STYLING
+   ========================================= */
+.ascii-cat {
+    font-family: var(--font-mono);
+    white-space: pre;
+    line-height: 1.1;
+    color: var(--color-text);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.skip-hint {
+    position: absolute;
+    bottom: 2rem;
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--color-bg);
+    opacity: 0.4;
+    letter-spacing: 0.05s;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --grid-padding: 40px;
+        --grid-gap: 24px;
+    }
+}
+
+/* =========================================
+   BACK TO TOP BUTTON
+   ========================================= */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+}
+
+/* Show the button when active */
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+/* Optional: Hide on large desktop screens if you only want it for mobile */
+@media (min-width: 1024px) {
+    .back-to-top {
+        display: none;
+    }
+}
