@@ -606,14 +606,17 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 100;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    /* Adds safe side margins so text never touches the screen edges */
     animation: introFadeOut 1s ease forwards;
     animation-delay: 5.4s;
-    /* only starts fading once the site has FULLY dropped in */
 }
 
 .receipt-intro-text {
     font-family: var(--font-mono);
-    font-size: var(--fs-md);
+    font-size: clamp(0.85rem, 3.5vw, var(--fs-md));
+    /* Scales down smoothly on smaller mobile screens */
     color: var(--color-bg);
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -791,5 +794,15 @@ body {
 @media (min-width: 1024px) {
     .back-to-top {
         display: none;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .branding-img,
+    .image-box img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
